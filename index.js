@@ -27,12 +27,9 @@ var mongoStore = MongoStore.create({
 });
 
 
-//aiu awgefbuioahbesruigae
 const MongoClient = require("mongodb").MongoClient;
 const atlasURI = `mongodb+srv://${mongodb_user}:${mongodb_password}@${mongodb_host}/?retryWrites=true`;
 var database = new MongoClient(atlasURI, {useNewUrlParser: true, useUnifiedTopology: true});
-
-//var {database} = include('databaseConnection');
 
 const userCollection = database.db(mongodb_database).collection('users');
 
@@ -199,5 +196,3 @@ app.get('*', (req,res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
-//mongodb+srv://danton:0989@cluster0.hq23sad.mongodb.net/
